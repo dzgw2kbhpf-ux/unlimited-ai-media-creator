@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unlimited AI Media Creator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>完全無料・無制限 AIメディア生成ツール</h1>
+        
+        <section id="image-gen">
+            <h2>画像生成</h2>
+            <input type="text" id="img-prompt" placeholder="プロンプトを入力 (例: 美しい風景)">
+            <input type="number" id="img-num" min="1" max="100" value="1" placeholder="生成枚数 (最大100)">
+            <button onclick="generateImage()">生成</button>
+            <div id="img-results"></div>
+        </section>
+        
+        <section id="image-edit">
+            <h2>画像編集</h2>
+            <input type="text" id="edit-prompt" placeholder="編集プロンプト">
+            <input type="file" id="edit-images" multiple accept="image/*">
+            <button onclick="editImage()">編集</button>
+            <div id="edit-results"></div>
+        </section>
+        
+        <section id="video-gen">
+            <h2>動画生成</h2>
+            <input type="text" id="video-prompt" placeholder="動画プロンプト">
+            <input type="text" id="audio-text" placeholder="音声テキスト (オプション)">
+            <button onclick="generateVideo()">生成</button>
+            <div id="video-results"></div>
+        </section>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
